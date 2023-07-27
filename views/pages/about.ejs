@@ -22,62 +22,170 @@
         </ul>
     </div>
 
-    <div class="container">
-        <div class="row">
-        <div class="col-md-12">
-            <div id="carouselExampleIndicators" class="carousel slide" data-rise="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active"></div>
-                        <div class="row">
-                            <div class="col-md-4">                 
-                                <div class="single-box">
-                                    <div class="img-area"><img scr="./img/draftBotBots.png" ait=""></div>
-                                    <div class="img-text"></div>
-                                    <h2>Person 1</h2>
-                                    <p>great</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="single-box">
-                                    <div class="img-area"><img scr="./img/draftBotBots.png" ait=""></div>
-                                    <div class="img-text"></div>
-                                    <h2>Person 2</h2>
-                                    <p>great</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="single-box">
-                                    <div class="img-area"><img scr="./img/draftBotBots.png" ait=""></div>
-                                    <div class="img-text"></div>
-                                    <h2>Person 3</h2>
-                                    <p>great</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="single-box">
-                                    <div class="img-area"><img scr="./img/draftBotBots.png" ait=""></div>
-                                    <div class="img-text"></div>
-                                    <h2>Person 3</h2>
-                                    <p>great</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="single-box">
-                                    <div class="img-area"><img scr="./img/draftBotBots.png" ait=""></div>
-                                    <div class="img-text"></div>
-                                    <h2>Person 3</h2>
-                                    <p>great</p>
-                                </div>
-                            </div>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สมาชิกทีม</title>
+  <!-- เพิ่ม CSS ของ Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- เพิ่ม CSS ที่คุณกำหนดเองที่นี่ (ถ้าต้องการใช้) -->
+  <style>
+     .animate-down {
+      margin-top: 50px; /* ปรับตามความต้องการ */
+      opacity: 0; /* เริ่มต้นให้บล็อกแสดงผลโปร่งใส */
+      transition: all 0.5s ease; /* ให้การเคลื่อนไหวมีเวลา 0.5 วินาที ดูง่ายขึ้น */
+    }
+    .show {
+      margin-top: 3;
+      opacity: 1;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    body {
+    overflow-x: hidden; /* ใส่คุณสมบัติ overflow-x ใน body เพื่อซ่อนส่วนที่ขยับแนวนอนเกินขอบจอ */
+  }
+
+    /* Animation for sliding left */
+    @keyframes slideLeft {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Apply animation to elements with animate-slide class */
+    .animate-slide {
+      animation: slideLeft 1s ease;
+    }
+  </style>
+   <script>
+    // เมื่อโหลดหน้าเว็บเสร็จสิ้น ทำการเพิ่มคลาส "show" เพื่อแสดงบล็อก
+    function animateBlocks() {
+      var blocks = document.querySelectorAll('.animate-down');
+      blocks.forEach(function(block, index) {
+        setTimeout(function() {
+          block.classList.add('show');
+        }, 100 * index); // 200 เป็นความหน่วง (delay) ในการแสดงเกิดขึ้นเท่ากับ 200 มิลลิวินาที
+      });
+    }
+    document.addEventListener('DOMContentLoaded', animateBlocks);
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-start">
+        <div class="overflow-x-scroll"></div>
+      <!-- สมาชิกทีมคนที่ 1 -->
+      <div class="row"></div>
+      <div class="col-md-4 mb-5 animate-down">
+        <div class="card">
+          <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 1">
+          <div class="card-body">
+            <h5 class="card-title">John Doe</h5>
+            <p class="card-text">นักพัฒนาเว็บหน้า (Frontend Developer)</p>
+            <p class="card-text">John เป็นนักพัฒนาเว็บหน้าที่มีประสบการณ์และมีความหลงใหลในการสร้างอินเทอร์เฟซที่สวยงามและสร้างประสบการณ์ผู้ใช้ที่น่าสนใจ</p>
+          </div>
         </div>
+      </div>
+
+      <!-- สมาชิกทีมคนที่ 2 -->
+      <div class="row"></div>
+      <div class="col-md-4 mb-5 animate-down">
+        <div class="card">
+          <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 2">
+          <div class="card-body">
+            <h5 class="card-title">Jane Smith</h5>
+            <p class="card-text">นักพัฒนาเบ็กเอนด์ (Backend Developer)</p>
+            <p class="card-text">Jane เป็นนักพัฒนาเบ็กเอนด์ที่มีความสามารถในการแก้ปัญหาที่ซับซ้อนและการสร้างระบบที่มีประสิทธิภาพ</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- สมาชิกทีมคนที่ 3 -->
+      <div class="row"></div>
+      <div class="col-md-4 mb-5 animate-down">
+        <div class="card">
+          <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 3">
+          <div class="card-body">
+            <h5 class="card-title">Michael Johnson</h5>
+            <p class="card-text">นักออกแบบประสบการณ์ผู้ใช้ (UX Designer)</p>
+            <p class="card-text">Michael เป็นนักออกแบบประสบการณ์ผู้ใช้ที่มีความสามารถในการสร้างอินเทอร์เฟซที่ใช้งานง่ายและใช้งานง่ายสำหรับเว็บและแอปพลิเคชันบนมือถือ</p>
+          </div>
+        </div>
+      </div>
+      <!-- สมาชิกทีมคนที่ 4 -->
+      <div class="row"></div>
+      <div class="col-md-4 mb-5 animate-down">
+        <div class="card">
+          <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 2">
+          <div class="card-body">
+            <h5 class="card-title">Jane Smith</h5>
+            <p class="card-text">นักพัฒนาเบ็กเอนด์ (Backend Developer)</p>
+            <p class="card-text">Jane เป็นนักพัฒนาเบ็กเอนด์ที่มีความสามารถในการแก้ปัญหาที่ซับซ้อนและการสร้างระบบที่มีประสิทธิภาพ</p>
+          </div>
+        </div>
+      </div>
+      <!-- สมาชิกทีมคนที่ 5 -->
+      <div class="row"></div>
+      <div class="col-md-4 mb-5 animate-down">
+        <div class="card">
+          <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 2">
+          <div class="card-body">
+            <h5 class="card-title">Jane Smith</h5>
+            <p class="card-text">นักพัฒนาเบ็กเอนด์ (Backend Developer)</p>
+            <p class="card-text">Jane เป็นนักพัฒนาเบ็กเอนด์ที่มีความสามารถในการแก้ปัญหาที่ซับซ้อนและการสร้างระบบที่มีประสิทธิภาพ</p>
+          </div>
+        </div>
+      </div>
+      <!-- สมาชิกทีมคนที่ 6 -->
+      <div class="row"></div>
+      <div class="col-md-4 mb-5 animate-down">
+        <div class="card">
+          <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 2">
+          <div class="card-body">
+            <h5 class="card-title">Jane Smith</h5>
+            <p class="card-text">นักพัฒนาเบ็กเอนด์ (Backend Developer)</p>
+            <p class="card-text">Jane เป็นนักพัฒนาเบ็กเอนด์ที่มีความสามารถในการแก้ปัญหาที่ซับซ้อนและการสร้างระบบที่มีประสิทธิภาพ</p>
+          </div>
+        </div>
+      </div>
+      <!-- สมาชิกทีมคนที่ 7 -->
+      <div class="row"></div>
+      <div class="col-md-4 mb-5 animate-down">
+        <div class="card">
+          <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 2">
+          <div class="card-body">
+            <h5 class="card-title">Jane Smith</h5>
+            <p class="card-text">นักพัฒนาเบ็กเอนด์ (Backend Developer)</p>
+            <p class="card-text">Jane เป็นนักพัฒนาเบ็กเอนด์ที่มีความสามารถในการแก้ปัญหาที่ซับซ้อนและการสร้างระบบที่มีประสิทธิภาพ</p>
+          </div>
+        </div>
+      </div>
+      <!-- เพิ่มสมาชิกทีม -->
     </div>
+  </div>
+
+  <!-- เพิ่ม JS ของ Bootstrap (ตัวเลือกหากคุณต้องการใช้ฟีเจอร์ JavaScript บางอย่าง) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+   
 
 
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script> src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</script>
     <script src="./js/script.js"></script>
 </body>
