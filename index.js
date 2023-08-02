@@ -13,7 +13,11 @@ app.listen(8080); //localhost:8080
 
 
 app.get('/', function(req, res){
-    res.render('pages/index');
+    res.render('pages/home');
+});
+
+app.get("/home", function (req, res) {
+  res.render("pages/index");
 });
 
 app.get('/about', function (req, res) {
