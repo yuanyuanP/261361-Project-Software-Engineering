@@ -8,9 +8,9 @@ var user = {message:""};
 var arrayOfPossibleMessage = [
   { message: "hi", response: "hello" },
   { message: "how are you", response: "I'm Good" },
-  { message: "what is your name", response:"I'am BotBots"},
-  { message: "where is cmu", response: "Thailand, Chiang Mai" },
-
+  { message: "what is your name", response: "I'am BotBots" },
+  { message: "where is cmu", response: "Thailand, Chiang Mai 50000" },
+  
 ];
 
 function sendMessage(userMessage){
