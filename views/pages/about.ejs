@@ -15,28 +15,249 @@
 
     <div>
         <ul>
-            <li><a href="/">MODE</a></li>
-            <li><a href="/home">HOME</a></li>
+            <li><a href="/">HOME</a></li>
             <li><a href="/about">ABOUT</a></li>
             <li><a href="/model">MODEL</a></li>
             
         </ul>
     </div>
 
-    <div class="container" style="margin-top: 60px;">
-        <h3 class="text-center">great</h3>
+    <!DOCTYPE html>
+<html lang="en">
 
-       
-        <p class="text-center">this is About Us pages</p>
-        <p class="text-center">this is About Us pages</p>
-        <p class="text-center">this is About Us pages</p>
-        <p class="text-center">this is About Us pages</p>
-       
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สมาชิกทีม</title>
+  <!-- เพิ่ม CSS ของ Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- เพิ่ม CSS ที่คุณกำหนดเองที่นี่ (ถ้าต้องการใช้) -->
+  <style>
+     .animate-down {
+      margin-top: 50px; /* ปรับตามความต้องการ */
+      opacity: 0; /* เริ่มต้นให้บล็อกแสดงผลโปร่งใส */
+      transition: all 0.5s ease; /* ให้การเคลื่อนไหวมีเวลา 0.5 วินาที ดูง่ายขึ้น */
+    }
+    .show {
+      margin-top: 3;
+      opacity: 1;
+    }
+    .container {
+      margin-top: 50px;
+    }
+   .element {
+      width: 1000px; /* Set the width as needed */
+      height: 800px; /* Set the height as needed */
+      margin-top: 100px;
+      margin-bottom: 50;
+    }
+    .card {
+      width: 300px;
+      height: 450px;
+      margin-bottom: -70px;
+      margin-top: -10px;
+      
+    }
+    .border {
+      height: 1000px;
+      margin-top: -30px;
+      margin-bottom: 50px;
+    }
+    .card-title {
+      text-align: center;
+    }
+    .card-text {
+      text-align: center;
+      white-space: pre;
+    }
+    .container-AboutUs{
+      text-align: center;
+      height: 1000px;
+      margin-left: 750px;
+      margin-top: 250px;
+    }
+    p {
+      text-align: left;
+    }
+    .card-img-top-bk{
+      height: 335px;
+    }
+    .card-img-top-Chin{
+      height: 335px;
+    }
+    /* Animation for sliding left */
+    @keyframes slideLeft {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
 
+    /* Apply animation to elements with animate-slide class */
+    .animate-slide {
+      animation: slideLeft 1s ease;
+    }
+  </style>
+   <script>
+    // เมื่อโหลดหน้าเว็บเสร็จสิ้น ทำการเพิ่มคลาส "show" เพื่อแสดงบล็อก
+    function animateBlocks() {
+      var blocks = document.querySelectorAll('.animate-down');
+      blocks.forEach(function(block, index) {
+        setTimeout(function() {
+          block.classList.add('show');
+        }, 100 * index); // 200 เป็นความหน่วง (delay) ในการแสดงเกิดขึ้นเท่ากับ 200 มิลลิวินาที
+      });
+    }
+    document.addEventListener('DOMContentLoaded', animateBlocks);
+  </script>
+</head>
+ 
+<body>
+  
+  <div class="container">
+    <div class="element">
+    <div class="row justify-content-start">
+      <h1 class="title text-center" >Team Member</h1>
+      <span class="border border-100">
+      <//div class="overflow-x-scroll">
+
+      <!-- สมาชิกทีมคนที่ 1 -->
+      <div class="row">
+      <div class="col-md-4 mb-5 animate-down">
+        <div class="card">
+          <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 1">
+          <div class="card-body">
+            <h5 class="card-title">HANCHUN WANG</h5>
+            <p class="card-text">
+(Frontend Developer)</p>
+         
+          </div>
+          </div>
+        </div>
+      
+
+      <!-- สมาชิกทีมคนที่ 2 -->
+      
+        <div class="col-md-4 mb-5 animate-down">
+          <div class="card">
+            <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 1">
+            <div class="card-body">
+              <h5 class="card-title">NUTTAPONG INKAEO</h5>
+              <p class="card-text"> 
+( Frontend Developer)
+              </p>
+            
+            </div>
+            </div>
+          </div>
+        
+      <!-- สมาชิกทีมคนที่ 3 -->
+      
+      <div class="col-md-4 mb-5 animate-down">
+        <div class="card">
+          <img src="./img/BK.jpg" class="card-img-top-bk" alt="สมาชิกทีมคนที่ 1">
+          <div class="card-body">
+            <h5 class="card-title">CHAYUT RIANPRAKAISANG</h5>
+            <p class="card-text"> 
+(Frontend Developer)</p>
+        
+          </div>
+          </div>
+        </div>
+
+        <!-- สมาชิกทีมคนที่ 4 -->
+      
+        <div class="col-md-4 mb-5 animate-down">
+          <div class="card">
+            <img src="./img/Chin.jpg" class="card-img-top-Chin" alt="สมาชิกทีมคนที่ 1">
+            <div class="card-body">
+              <h5 class="card-title">CHINNAWAT SERMSUKRUNGSAKUN</h5>
+              <p class="card-text "> (Frontend Developer)</p>
+            
+            </div>
+            </div>
+          </div>
+
+          <!-- สมาชิกทีมคนที่ 5 -->
+      
+        <div class="col-md-4 mb-5 animate-down">
+          <div class="card">
+            <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 1">
+            <div class="card-body">
+              <h5 class="card-title">NATAKORN THAMMATIWAT</h5>
+              <p class="card-text"> 
+(Frontend Developer)</p>
+            
+            </div>
+            </div>
+          </div>
+
+           <!-- สมาชิกทีมคนที่ 6 -->
+      
+        <div class="col-md-4 mb-5 animate-down">
+          <div class="card">
+            <img src="./img/draftBotBots.png" class="card-img-top" alt="สมาชิกทีมคนที่ 1">
+            <div class="card-body">
+              <h5 class="card-title">PARIPAT YUANSEE</h5>
+              <p class="card-text"> 
+(Frontend Developer)</p>
+          
+            </div>
+            </div>
+          </div>
+          </span>
+        
+      </div>
+      </div>
+
+      
+         
+  </div>
+  <div class="container-AboutUs">
+    <div class="row">
+        <div>
+            <h1>About Us</h1>
+            <p >Welcome to Your Company Name! We are a dedicated team of professionals committed to providing exceptional services and products to our valued customers.</p>
+            <p class="AboutUs-text-2">Founded in [Year], we have quickly become a trusted name in the industry, known for our [Unique Selling Points]. Our team brings together a diverse range of skills and expertise, ensuring that we can meet the unique needs of each and every client.</p>
+            <p class="AboutUs-text-3">Our mission is to [State Your Mission and Values]. We believe in [Core Beliefs or Principles] and strive to [Your Commitment to Customers].</p>
+        </div>
+        <div class="col-md-6">
+            <!-- You can add an image or other content here -->
+        </div>
     </div>
+  </div>
+  
+  <footer class="py-3 my-4">
+    <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
+  </footer>
+     
+  
+      
+      
+     
+    
+
+    
+  
+  
+  
+
+  <!-- เพิ่ม JS ของ Bootstrap (ตัวเลือกหากคุณต้องการใช้ฟีเจอร์ JavaScript บางอย่าง) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+   
 
 
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script> src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"</script>
     <script src="./js/script.js"></script>
 </body>
