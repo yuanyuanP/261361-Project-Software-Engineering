@@ -1,7 +1,6 @@
 * {
   color: white;
   font-family: 'Courier New', Courier, monospace;
-
 }
 
 body {
@@ -10,12 +9,12 @@ body {
 }
 
 .app {
-  background-color: brown;
+  background-color: #343541;
   display: flex;
 }
 
 .side-bar {
-  background-color: aquamarine;
+  background-color: #202123;
   height: 100vh;
   width: 244px;
   display: flex;
@@ -23,8 +22,8 @@ body {
   justify-content: space-between;
 }
 
-.button {
-  border: 0.5px green;
+button {
+  border: solid 0.5px white;
   background-color: transparent;
   border-radius: 5px;
   padding: 10px;
@@ -32,7 +31,7 @@ body {
 }
 
 nav {
-  border-top: solid 0.5px blue;
+  border-top: solid 0.5px white;
   padding: 10px;
   margin: 10px;
 }
@@ -45,9 +44,10 @@ nav {
 
 .history li {
   list-style-type: none;
-  padding: 15px 0;
+  padding: 10px 0;
   cursor: pointer;
 }
+
 
 .main {
   height: 100vh;
@@ -60,10 +60,11 @@ nav {
 }
 
 .info {
-  color: gray;
+  color: white;
   font-size: 11px;
   padding: 10px;
 }
+
 
 .bottom-section {
   width: 100%;
@@ -82,7 +83,25 @@ nav {
 input {
   width: 100%;
   border: none;
-  background-color: blueviolet;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 12px 15px;
   border-radius: 5px;
+  box-shadow: 
+  rgba(0, 0, 0, 0.05) 0 54px 55px,
+  rgba(0, 0, 0, 0.05) 0 -12px 30px,
+  rgba(0, 0, 0, 0.05) 0 4px 6px,
+  rgba(0, 0, 0, 0.05) 0 12px 3px,
+  rgba(0, 0, 0, 0.05) 0 -3px 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#submit {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  cursor: pointer;
 }
